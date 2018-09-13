@@ -1,5 +1,6 @@
 body {
 	margin: 0px;
+	background: linear-gradient(to right, red, yellow);
 }
 
 .container {
@@ -11,11 +12,11 @@ body {
 h1 {
 	/* font-family: fantasy; */
 	font-size: 3em;
-	border-bottom: 2px solid pink;
-	border-right: 2px solid pink;
+	/* border-bottom: 2px solid pink;
+	border-right: 2px solid pink; */
 	width: 400px;
 	text-align: center;
-	box-shadow:	4px 4px 5px #888888; 
+	/* box-shadow:	4px 4px 5px #888888;  */
 	margin-top: 10px;
 }
 
