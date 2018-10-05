@@ -9,7 +9,7 @@ function renderGalleryItem(randomNumber) {
         .then((response) => {
             let galleryItem = document.createElement('div');
             // galleryItem.classList.add('gallery-item');
-            galleryItem.innerHTML = `<img src="${response.url}" alt="gallery image"/>`
+            galleryItem.innerHTML = `<a href="${response.url}"><img src="${response.url}" alt="gallery image"></a>`
             document.body.appendChild(galleryItem);
         })
 }
