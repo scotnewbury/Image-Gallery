@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6d58d0f9-39ab-4858-ae7e-700692347c0a/deploy-status)](https://app.netlify.com/sites/newbury-image-gallery/deploys)
+
 # Image-Gallery
 
 Image gallery based off project in the Zero to Mastery course
