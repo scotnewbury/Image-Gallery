@@ -1,20 +1,19 @@
-const numItemsToGenerate = 6; //how many gallery items you want on the screen
-const numImagesAvailable = 1111; //how many total images are in the collection you are pulling from
-// const imageWidth = 480; //your desired image width in pixels
-// const imageHeight = 480; //desired image height in pixels
-const collectionID = 1360066; //the collection ID from the original url
+const numImagesAvailable = 1111;
+const collectionID = 1360066; //the collection ID from the Unsplash url
+const numItemsToGrab = 6;
+
 document.body.classList.add('container')
-function renderGalleryItem(randomNumber) {
-    fetch(`https://source.unsplash.com/collection/${collectionID}/?sig=${randomNumber}`)
+
+function renderGalleryItem(randomImageIndex) {
+    fetch(`https://source.unsplash.com/collection/${collectionID}/?sig=${randomImageIndex}`)
         .then((response) => {
             let galleryItem = document.createElement('div');
-            // galleryItem.classList.add('gallery-item');
-            galleryItem.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${response.url}"><img src="${response.url}" alt="gallery image"></a>`
+            galleryItem.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${response.url}"><img src="${response.url}" alt="gallery image"></a>`;
             document.body.appendChild(galleryItem);
         })
 }
 
-for (let i = 1; i <= numItemsToGenerate; i++) {
-    let randomImageIndex = Math.floor(Math.random() * numImagesAvailable);
+for (let i = 1; i <= numItemsToGrab; i++) {
+  let randomImageIndex = (Math.floor(Math.random() * numImagesAvailable) + 1);
     renderGalleryItem(randomImageIndex);
 }
